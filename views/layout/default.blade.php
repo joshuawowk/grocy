@@ -88,6 +88,9 @@
 		href="{{ $U('/css/grocy_night_mode.css?v=', true) }}{{ $version }}"
 		rel="stylesheet">
 	@endif
+	<!-- Oikos theme: must load last so it overrides Bootstrap, Grocy and night mode -->
+	<link href="{{ $U('/css/grocy_oikos_theme.css?v=', true) }}{{ $version }}"
+		rel="stylesheet">
 
 	@stack('pageStyles')
 
