@@ -330,6 +330,42 @@ body.night-mode .table tbody tr:hover {
 .table tbody tr:hover td:first-child {
 	box-shadow: inset 3px 0 0 var(--ok-accent);
 }
+
+/* Stock status rows (Bootstrap contextual classes) → Oikos tinted status cards.
+   Mirrors how Oikos colour-codes task cards by status: subtle tint + semantic
+   left accent + readable light text. */
+.table tbody tr.table-danger, .table tbody tr.table-danger > td,
+.table tbody tr.table-warning, .table tbody tr.table-warning > td,
+.table tbody tr.table-success, .table tbody tr.table-success > td,
+.table tbody tr.table-secondary, .table tbody tr.table-secondary > td,
+.table tbody tr.table-info, .table tbody tr.table-info > td,
+.table tbody tr.table-active, .table tbody tr.table-active > td {
+	color: var(--ok-text) !important;
+}
+.table tbody tr.table-danger > td,
+.table tbody tr.table-warning > td,
+.table tbody tr.table-success > td,
+.table tbody tr.table-secondary > td,
+.table tbody tr.table-info > td,
+.table tbody tr.table-active > td { background-color: transparent !important; }
+
+.table tbody tr.table-danger    { background-color: color-mix(in srgb, var(--ok-danger) 13%, var(--ok-surface)) !important; }
+.table tbody tr.table-warning   { background-color: color-mix(in srgb, var(--ok-warning) 13%, var(--ok-surface)) !important; }
+.table tbody tr.table-success   { background-color: color-mix(in srgb, var(--ok-success) 13%, var(--ok-surface)) !important; }
+.table tbody tr.table-info      { background-color: color-mix(in srgb, var(--ok-info) 13%, var(--ok-surface)) !important; }
+.table tbody tr.table-secondary,
+.table tbody tr.table-active     { background-color: var(--ok-surface-3) !important; }
+
+.table tbody tr.table-danger    td:first-child { box-shadow: inset 3px 0 0 var(--ok-danger)  !important; }
+.table tbody tr.table-warning   td:first-child { box-shadow: inset 3px 0 0 var(--ok-warning) !important; }
+.table tbody tr.table-success   td:first-child { box-shadow: inset 3px 0 0 var(--ok-success) !important; }
+.table tbody tr.table-info      td:first-child { box-shadow: inset 3px 0 0 var(--ok-info)    !important; }
+.table tbody tr.table-secondary td:first-child,
+.table tbody tr.table-active    td:first-child { box-shadow: inset 3px 0 0 var(--ok-disabled) !important; }
+
+.table.table-hover tbody tr.table-danger:hover  { background-color: color-mix(in srgb, var(--ok-danger) 20%, var(--ok-surface)) !important; }
+.table.table-hover tbody tr.table-warning:hover { background-color: color-mix(in srgb, var(--ok-warning) 20%, var(--ok-surface)) !important; }
+.table.table-hover tbody tr.table-success:hover { background-color: color-mix(in srgb, var(--ok-success) 20%, var(--ok-surface)) !important; }
 .table td,
 body.night-mode .table td {
 	border: none !important;
